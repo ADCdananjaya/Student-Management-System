@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="w-full h-screen flex flex-col items-center">
+        <div class="flex h-auto w-auto justify-center items-center mt-16">
+            <button class="text-2xl bg-green-900 border border-black rounded-md text-white mx-8 px-6 py-3 hover:bg-green-700 shadow-lg hover:-translate-y-1" id="stButton">Students</button>
+            <button class="text-2xl bg-green-700 border border-black rounded-md text-white mx-8 px-6 py-3 hover:bg-green-700 shadow-lg -translate-y-1" id="regButton" disabled>Register</button>
+            <button class="text-2xl bg-green-900 border border-black rounded-md text-white mx-8 px-6 py-3 hover:bg-green-700 shadow-lg hover:-translate-y-1" id="opButton">Operations</button>
+        </div>
+        <div class="w-4/5 h-auto flex items-center justify-center mt-12">
+            <div class="flex flex-col w-2/4 h-auto border border-black rounded-xl items-center justify-center m-5 shadow-xl bg-green-300">
+                <p class="font-sans font-bold text-3xl mb-9 mt-3">Student Details</p>
+                <div class="w-full h-auto flex justify-around mx-5 mb-5">
+                    <p class="text-2xl font-bold">Name</p>
+                    <input type="text" id="name" class="border border-green-900 border-double hover:border-red-700">
+                </div>
+                <div class="w-full h-auto flex justify-around mx-5 mb-5">
+                    <p class="text-2xl font-bold">Age</p>
+                    <input type="text" id="age" class="border border-green-900 border-double hover:border-red-700">
+                </div>
+                <div class="w-full h-auto flex justify-around mx-5 mb-5">
+                    <p class="text-2xl font-bold">University</p>
+                    <input type="text" id="university" class="border border-green-900 border-double hover:border-red-700">
+                </div>
+                <div class="w-full h-auto flex justify-around mx-5 mb-5">
+                    <p class="text-2xl font-bold">Skills</p>
+                    <input type="text" id="skills" class="border border-green-900 border-double hover:border-red-700">
+                </div>
+                <button class="h-10 w-[5rem] border border-black rounded-lg bg-green-50 text-xl mb-6 mt-2 shadow-md hover:shadow-lg hover:bg-green-100">Add</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
