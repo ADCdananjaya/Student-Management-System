@@ -14,7 +14,25 @@
             <button class="text-2xl bg-green-900 border border-black rounded-md text-white mx-8 px-6 py-3 hover:bg-green-700 shadow-lg hover:-translate-y-1" id="regButton">Register</button>
             <button class="text-2xl bg-green-700 border border-black rounded-md text-white mx-8 px-6 py-3 hover:bg-green-700 shadow-lg -translate-y-1" id="opButton" disabled>Operations</button>
         </div>
-        <div class="w-4/5 h-auto border border-black rounded-md flex items-center justify-center mt-12" id="studentsGrid">
+        <div class="w-4/5 h-auto border border-black rounded-md flex flex-col items-center justify-center mt-12" id="studentsGrid">
+            <div class="flex items-center p-6 space-x-6 bg-white rounded-xl shadow-lg hover:shadow-xl transform transition duration-500 my-6 ">
+                <div class="flex bg-gray-100 p-4 w-72 space-x-4 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input class="bg-gray-100 outline-none" type="text" placeholder="Article name or keyword..." />
+                </div>
+                <div class="flex py-3 px-4 rounded-lg text-gray-500 font-semibold cursor-pointer">
+                    <span>All categorie</span>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <div class="bg-green-400 py-3 px-5 text-white font-semibold rounded-lg hover:shadow-lg transition duration-3000 cursor-pointer">
+                    <span>Search</span>
+                </div>
+            </div>
             <div class="grid grid-flow-row grid-cols-4 p-2">
                 <div class="h-[21rem] w-60 border border-black rounded-md shadow-lg mx-5 mb-5 flex flex-col justify-center items-center hover:shadow-xl hover:-translate-y-1 bg-green-300">
                     <p class="text-3xl font-bold">Name</p>
