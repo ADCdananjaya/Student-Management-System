@@ -1,14 +1,10 @@
-const mongoose = require("mongoose");
+const { userName, password } = require("./credentials");
+const { MongoClient } = require("mongodb");
+const uri = `mongodb+srv://${userName}:${password}@mycluster.kxb0rwl.mongodb.net/?retryWrites=true&w=majority`;
 
-var main = () => {
-    mongoose.connect("mongodb://localhost:27017/newdb", { useNewUrlParser: true, useUnifiedTopology: true}, (err) => {
-        if (err) {
-            console.log(err);
-        }
-        else {
-            console.log("successfully connected!");
-        }
-    });
-}
+const client = new MongoClient(uri);
+client.connect();
+// client.db("test").collection("students").insertOne({name: "devon", age: 20, univeristy: "UOJ"});
+// console.log("successfully added!");
 
-module.exports = {main};
+module.exports = { client };

@@ -1,6 +1,5 @@
 const express = require("express");
-const client = require("./connection");
-client.main();
+// const { client } = require("./connection");
 const app = express();
 
 const { readFileSync } = require("fs");
@@ -27,7 +26,16 @@ app.post("/form_post", (req, res) => {
 
 app.get("/register/query", (req, res) => {
     console.log(req.query);
-    res.send("<h1>Thank you</h1>");
+    // client.db("test").collection("students").insertOne({name: req.query.name, age: req.query.age, university: req.query.univeristy});
+    res.sendFile("./build/register.html", {root: __dirname});
+});
+
+app.get("/api/students", (req, res) => {
+    res.send([{name: "lucifer", age: 22}, {name: "chamod", age: 23}, {name: "tharu", age: 23}, {name: "john", age: 27}]);
+});
+
+app.post("/api/students", (req, res) => {
+    console.log(req.body);
 });
 
 app.get("*", (req, res) => {
